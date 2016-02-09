@@ -70,7 +70,7 @@ public class MainWindow extends JFrame {
 	}
 	private JButton getBtnAbrir() {
 		if (btnAbrir == null) {
-			btnAbrir = new JButton("abrir");
+			btnAbrir = new JButton("open");
 			btnAbrir.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					
@@ -96,7 +96,7 @@ public class MainWindow extends JFrame {
 	}
 	private JButton getBtnEstablecer() {
 		if (btnEstablecer == null) {
-			btnEstablecer = new JButton("establecer");
+			btnEstablecer = new JButton("set folder");
 			btnEstablecer.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					try {
