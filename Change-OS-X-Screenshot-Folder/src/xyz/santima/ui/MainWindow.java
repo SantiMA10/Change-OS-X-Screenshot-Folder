@@ -22,8 +22,8 @@ public class MainWindow extends JFrame {
 	
 	private JPanel contentPane;
 	private JTextField txtRuta;
-	private JButton btnAbrir;
-	private JButton btnEstablecer;
+	private JButton btnOpen;
+	private JButton btnSet;
 	private MainWindow mainWindow;
 
 	/**
@@ -56,8 +56,10 @@ public class MainWindow extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		contentPane.add(getTxtRuta());
-		contentPane.add(getBtnAbrir());
-		contentPane.add(getBtnEstablecer());
+		contentPane.add(getBtnOpen());
+		contentPane.add(getBtnSet());
+		
+		btnSet.setEnabled(false);
 	}
 	private JTextField getTxtRuta() {
 		if (txtRuta == null) {
@@ -68,10 +70,10 @@ public class MainWindow extends JFrame {
 		}
 		return txtRuta;
 	}
-	private JButton getBtnAbrir() {
-		if (btnAbrir == null) {
-			btnAbrir = new JButton("open");
-			btnAbrir.addActionListener(new ActionListener() {
+	private JButton getBtnOpen() {
+		if (btnOpen == null) {
+			btnOpen = new JButton("open");
+			btnOpen.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					
 					JFileChooser file = new JFileChooser();
@@ -82,6 +84,7 @@ public class MainWindow extends JFrame {
 					if(choose != null){
 						try {
 							mainWindow.txtRuta.setText(choose.getCanonicalPath().toString());
+							btnSet.setEnabled(true);
 						} catch (IOException e1) {
 							// TODO Auto-generated catch block
 							e1.printStackTrace();
@@ -90,26 +93,27 @@ public class MainWindow extends JFrame {
 					
 				}
 			});
-			btnAbrir.setBounds(324, 20, 117, 29);
+			btnOpen.setBounds(324, 20, 117, 29);
 		}
-		return btnAbrir;
+		return btnOpen;
 	}
-	private JButton getBtnEstablecer() {
-		if (btnEstablecer == null) {
-			btnEstablecer = new JButton("set folder");
-			btnEstablecer.addActionListener(new ActionListener() {
+	private JButton getBtnSet() {
+		if (btnSet == null) {
+			btnSet = new JButton("set folder");
+			btnSet.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					try {
 						Runtime.getRuntime().exec("defaults write com.apple.screencapture location " + txtRuta.getText());
 						Runtime.getRuntime().exec("killall SystemUIServer");
+						btnSet.setEnabled(false);
 					} catch (IOException e1) {
 						// TODO Auto-generated catch block
 						e1.printStackTrace();
 					}
 				}
 			});
-			btnEstablecer.setBounds(441, 20, 117, 29);
+			btnSet.setBounds(441, 20, 117, 29);
 		}
-		return btnEstablecer;
+		return btnSet;
 	}
 }
