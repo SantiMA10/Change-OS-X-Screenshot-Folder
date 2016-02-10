@@ -15,3 +15,7 @@ bin/
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+Change-OS-X-Screenshot-Folder/.externalToolBuilders/New_Builder.launch
+
+Change-OS-X-Screenshot-Folder/build.xml
