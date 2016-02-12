@@ -13,6 +13,9 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
+import xyz.santima.logic.CommandExecutor;
+import xyz.santima.util.FileDrop;
+
 public class MainWindow extends JFrame {
 
 	/**
@@ -21,7 +24,7 @@ public class MainWindow extends JFrame {
 	private static final long serialVersionUID = 1L;
 	
 	private JPanel contentPane;
-	private JTextField txtRuta;
+	private JTextField txtPath;
 	private JButton btnOpen;
 	private JButton btnSet;
 	private MainWindow mainWindow;
@@ -55,20 +58,30 @@ public class MainWindow extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		contentPane.add(getTxtRuta());
+		contentPane.add(getTxtPath());
 		contentPane.add(getBtnOpen());
 		contentPane.add(getBtnSet());
 		
 		btnSet.setEnabled(false);
+		
+		new FileDrop( contentPane, new FileDrop.Listener() {
+			public void filesDropped( File[] files ) {   
+
+				txtPath.setText(files[0].getAbsolutePath());
+				btnSet.setEnabled(true);
+				
+			}   
+		});
+
 	}
-	private JTextField getTxtRuta() {
-		if (txtRuta == null) {
-			txtRuta = new JTextField();
-			txtRuta.setEditable(false);
-			txtRuta.setBounds(53, 20, 259, 26);
-			txtRuta.setColumns(10);
+	private JTextField getTxtPath() {
+		if (txtPath == null) {
+			txtPath = new JTextField();
+			txtPath.setEditable(false);
+			txtPath.setBounds(53, 20, 259, 26);
+			txtPath.setColumns(10);
 		}
-		return txtRuta;
+		return txtPath;
 	}
 	private JButton getBtnOpen() {
 		if (btnOpen == null) {
@@ -83,7 +96,7 @@ public class MainWindow extends JFrame {
 					File choose = file.getSelectedFile();
 					if(choose != null){
 						try {
-							mainWindow.txtRuta.setText(choose.getCanonicalPath().toString());
+							mainWindow.txtPath.setText(choose.getCanonicalPath().toString());
 							btnSet.setEnabled(true);
 						} catch (IOException e1) {
 							// TODO Auto-generated catch block
@@ -101,16 +114,12 @@ public class MainWindow extends JFrame {
 		if (btnSet == null) {
 			btnSet = new JButton("set folder");
 			btnSet.addActionListener(new ActionListener() {
+				
 				public void actionPerformed(ActionEvent e) {
-					try {
-						Runtime.getRuntime().exec("defaults write com.apple.screencapture location " + txtRuta.getText());
-						Runtime.getRuntime().exec("killall SystemUIServer");
-						btnSet.setEnabled(false);
-					} catch (IOException e1) {
-						// TODO Auto-generated catch block
-						e1.printStackTrace();
-					}
+					CommandExecutor.changeScreenShotFolder(txtPath.getText());
+					btnSet.setEnabled(false);
 				}
+				
 			});
 			btnSet.setBounds(441, 20, 117, 29);
 		}
