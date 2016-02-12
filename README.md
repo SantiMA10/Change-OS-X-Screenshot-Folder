@@ -15,7 +15,7 @@ Download [last release](https://github.com/SantiMA10/Change-OS-X-Screenshot-Fold
 Inside the app, select the folder by pressing the 'open' buttom or drag the folder into the app, then press the 'set folder' buttom.
 
 ### Thanks
-* iHeader for her [FileDrop](http://iharder.sourceforge.net/current/java/filedrop/) class
+* iHeader for [FileDrop](http://iharder.sourceforge.net/current/java/filedrop/) class
 
 ## Español 🇪🇸
 
