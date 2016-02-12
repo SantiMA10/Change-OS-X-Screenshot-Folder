@@ -1,21 +1,60 @@
-*.class
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
+*.class
 
 # Package Files #
 *.jar
 *.war
 *.ear
 .classpath
-.settings
+.settings/*
+*/target
+
 .metadata
-.project
 bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
+# Eclipse Core
+.project
 
-Change-OS-X-Screenshot-Folder/.externalToolBuilders/New_Builder.launch
+# External tool builders
+.externalToolBuilders/
 
-Change-OS-X-Screenshot-Folder/build.xml
+# Locally stored "Eclipse launch configurations"
+*.launch
+
+# PyDev specific (Python IDE for Eclipse)
+*.pydevproject
+
+# CDT-specific (C/C++ Development Tooling)
+.cproject
+
+# JDT-specific (Eclipse Java Development Tools)
+.classpath
+
+# Java annotation processor (APT)
+.factorypath
+
+# PDT-specific (PHP Development Tools)
+.buildpath
+
+# sbteclipse plugin
+.target
+
+# Tern plugin
+.tern-project
+
+# TeXlipse plugin
+.texlipse
+
+# STS (Spring Tool Suite)
+.springBeans
+
+# Code Recommenders
+

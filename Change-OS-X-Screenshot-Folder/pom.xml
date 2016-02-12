@@ -4,4 +4,12 @@
   <artifactId>Change-OS-X-Screenshot-Folder</artifactId>
   <version>1.1.1</version>
   <name>Change-OS-X-Screenshot-Folder</name>
+  
+  <dependencies>
+  	<dependency>
+  		 <groupId>org.apache.commons</groupId>
+		 <artifactId>commons-lang3</artifactId>
+		 <version>3.4</version>
+  	</dependency>
+  </dependencies>
 </project>
