@@ -1,5 +1,7 @@
 # Change-OS-X-Screenshot-Folder
 
+[![Build Status](https://travis-ci.org/SantiMA10/Change-OS-X-Screenshot-Folder.svg?branch=master)](https://travis-ci.org/SantiMA10/Change-OS-X-Screenshot-Folder)
+
 ## English 🇬🇧
 
 ### Motivation
