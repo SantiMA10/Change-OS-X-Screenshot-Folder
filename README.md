@@ -2,6 +2,8 @@
 
 [![Build Status](https://travis-ci.org/SantiMA10/Change-OS-X-Screenshot-Folder.svg?branch=master)](https://travis-ci.org/SantiMA10/Change-OS-X-Screenshot-Folder)
 
+![App icon](https://cloud.githubusercontent.com/assets/7255298/13026924/e966f656-d23a-11e5-9d8f-ee046e196fd1.png)
+
 ## English 🇬🇧
 
 ### Motivation
