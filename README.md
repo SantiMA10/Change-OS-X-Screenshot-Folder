@@ -1,6 +1,10 @@
 # Change-OS-X-Screenshot-Folder
 
 [![Build Status](https://travis-ci.org/SantiMA10/Change-OS-X-Screenshot-Folder.svg?branch=master)](https://travis-ci.org/SantiMA10/Change-OS-X-Screenshot-Folder)
+![Release](http://github-release-version.herokuapp.com/github/SantiMA10/Change-OS-X-Screenshot-Folder/release.png)
+[![GitHub issues](https://img.shields.io/github/issues/SantiMA10/Change-OS-X-Screenshot-Folder.svg)](https://github.com/SantiMA10/Change-OS-X-Screenshot-Folder/issues)
+[![GitHub forks](https://img.shields.io/github/forks/SantiMA10/Change-OS-X-Screenshot-Folder.svg)](https://github.com/SantiMA10/Change-OS-X-Screenshot-Folder/network)
+[![GitHub stars](https://img.shields.io/github/stars/SantiMA10/Change-OS-X-Screenshot-Folder.svg)](https://github.com/SantiMA10/Change-OS-X-Screenshot-Folder/stargazers)
 
 ![App icon](https://cloud.githubusercontent.com/assets/7255298/13026924/e966f656-d23a-11e5-9d8f-ee046e196fd1.png)
 
