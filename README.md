@@ -8,6 +8,8 @@
 
 ![App icon](https://cloud.githubusercontent.com/assets/7255298/13026924/e966f656-d23a-11e5-9d8f-ee046e196fd1.png)
 
+[*New swift version/Nueva versión en Swift*](https://github.com/SantiMA10/Change-macOS-Screenshot-Folder)
+
 ## English 🇬🇧
 
 ### Motivation
